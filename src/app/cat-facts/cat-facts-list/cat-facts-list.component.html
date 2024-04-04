@@ -1,0 +1,4 @@
+@for (catFact of catFacts$ | async; track $index) {
+  <div class="cat-fact">{{ catFact.fact }}</div>
+}
+<button [disabled]="isLastPage$ | async" class="load-more-button" (click)="loadMore()">Загрузить еще</button>
